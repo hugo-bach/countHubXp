@@ -30,11 +30,11 @@ You have a link of the followin format:
 ```diff
 https://intra.epitech.eu/auth-id
 ```
-```diff
-! WARNING: Never communicate your link or autologin code. This script does not send any request other than that of the intra
-```
-
 Copy this id
+```diff
+! WARNING: Never communicate your link or autologin code.
+! This script does not send any request other than that of the intra
+```
 
 ### Env
 Create your `.env` file at the root of the project
