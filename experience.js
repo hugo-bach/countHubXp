@@ -39,7 +39,7 @@ const xpAct = [
   },
 ];
 
-const me = { nbXps: 0, present: [], absent: [], soon: [] };
+const me = { nbXps: 0, nbXpsSoon: 0, present: [], absent: [], soon: [] };
 
 const requestGet = async (url) => {
   let res;
@@ -95,12 +95,36 @@ const addActivite = (title, type, status, date) => {
       me.present.push({ title, type, status: "organisateur", date });
       break;
     case "soon":
-      //nbPart < limitPart && (findAct.nbPart += 1);
       me.soon.push({ title, type, status: "inscrit", date });
       break;
     default:
       break;
   }
+};
+
+const checkAbsence = () => {
+  const nb = me.absent.length;
+  let i = 0;
+  while (i < nb) {
+    const { title, type, date } = me.absent[0];
+    const response = readline.question(
+      `As-tu été absent à cette activitée : ${title}\n[Y/n] `
+    );
+    if (response.match(/^n$/)) {
+      me.nbXps += xpAct.find((elem) => elem.name === type)?.xpWinPart;
+      addActivite(title, type, "present", date);
+      me.absent.shift();
+    }
+    i++;
+  }
+};
+
+const countXpSoon = () => {
+  me.soon.map((act) => {
+    const findAct = xpAct.find((elem) => elem.name === act.type);
+    const { xpWinPart, limitPart, nbPart } = findAct;
+    nbPart < limitPart && (me.nbXpsSoon += xpWinPart) && findAct.nbPart++;
+  });
 };
 
 const getXp = async () => {
@@ -148,21 +172,8 @@ const getXp = async () => {
         );
     }
   });
-
-  const nb = me.absent.length;
-  let i = 0;
-  while (i < nb) {
-    const { title, type, date } = me.absent[0];
-    const response = readline.question(
-      `As-tu été absent à cette activitée : ${title}\n[Y/n] `
-    );
-    if (response.match(/^n$/)) {
-      me.nbXps += xpAct.find((elem) => elem.name === type)?.xpWinPart;
-      addActivite(title, type, "present", date);
-      me.absent.shift();
-    }
-    i++;
-  }
+  checkAbsence();
+  countXpSoon();
   console.log(me);
 };
 
