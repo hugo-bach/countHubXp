@@ -27,7 +27,13 @@ Go with your account on the [intra](https://intra.epitech.eu) > Administration s
 Or it's faster to click [here](https://intra.epitech.eu/admin/autolog)
 
 You have a link of the followin format:
-`https://intra.epitech.eu/auth-id`
+```diff
+https://intra.epitech.eu/auth-id
+```
+```diff
+! WARNING: Never communicate your link or autologin code. This script does not send any request other than that of the intra
+```
+
 Copy this id
 
 ### Env
