@@ -95,7 +95,7 @@ const addActivite = (title, type, status, date) => {
       me.present.push({ title, type, status: "organisateur", date });
       break;
     case "soon":
-      nbPart < limitPart && (findAct.nbPart += 1);
+      //nbPart < limitPart && (findAct.nbPart += 1);
       me.soon.push({ title, type, status: "inscrit", date });
       break;
     default:
