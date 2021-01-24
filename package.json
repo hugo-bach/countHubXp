@@ -1,0 +1,25 @@
+{
+  "name": "counthubxp",
+  "version": "1.0.0",
+  "description": "Script for count xp hub",
+  "main": "experience.js",
+  "scripts": {
+    "start": "node experience.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hugo-bach/countHubXp.git"
+  },
+  "author": "Hugo BACH",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hugo-bach/countHubXp/issues"
+  },
+  "homepage": "https://github.com/hugo-bach/countHubXp#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "dotenv": "^8.2.0",
+    "readline-sync": "^1.4.10"
+  }
+}
