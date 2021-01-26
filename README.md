@@ -10,7 +10,7 @@ This script lists these different activities:
 You can see all the activities where you have been present or absent as well as the activities where you are registered but which have not yet started.
 
 ## Requirement:
-- NodeJS 15.6.0 or later
+- NodeJS 14.8.0 or later
 - Git
 
 ## Common setup:
