@@ -1,6 +1,6 @@
 # countHubXp v1.0
 
-Count your xp hubs with a single command. Yes it's possible with this script.
+Count your xp hubs with a single command. Of course it's possible with this script.
 
 This script lists these different activities:
 - Hackathon
@@ -24,7 +24,7 @@ npm install
 
 ### Autologin intra EPITECH
 Go with your account on the [intra](https://intra.epitech.eu) > Administration section > Generate autologin link.
-Or it's faster to click [here](https://intra.epitech.eu/admin/autolog)
+Otherwise it's faster to click [here](https://intra.epitech.eu/admin/autolog)
 
 You have a link of the followin format:
 ```diff
