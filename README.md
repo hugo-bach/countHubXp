@@ -38,7 +38,7 @@ Copy this id
 
 ### Env
 Create your `.env` file at the root of the project
-Insert in your in file the following code :
+Insert in your file the following code :
 ```
 ID_AUTOLOGIN="id"
 ```
