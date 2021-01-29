@@ -2,9 +2,13 @@
   "name": "counthubxp",
   "version": "1.0.0",
   "description": "Script for count xp hub",
-  "main": "experience.js",
+  "main": "src/index.js",
+  "engines": {
+    "node": ">=14"
+  },
+  "type": "module",
   "scripts": {
-    "start": "node experience.js",
+    "start": "node src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,7 +23,10 @@
   "homepage": "https://github.com/hugo-bach/countHubXp#readme",
   "dependencies": {
     "axios": "^0.21.1",
+    "chalk": "^4.1.0",
     "dotenv": "^8.2.0",
+    "inquirer": "^7.3.3",
+    "ora": "^5.3.0",
     "readline-sync": "^1.4.10"
   }
 }
