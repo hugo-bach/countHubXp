@@ -144,16 +144,17 @@ const getXp = async () => {
   activities.map((activite) => {
     const typeAct = regexExp.exec(activite?.type_title);
 
+    activite.events.map((event) => {
     if (typeAct) {
-      if (activite?.events[0]?.user_status)
+      if (event?.user_status)
         addActivite(
           activite.title,
           typeAct[0],
-          activite.events[0].user_status,
-          activite.events[0].begin
+          event.user_status,
+          event.begin
         );
       else if (
-        activite?.events[0]?.assistants?.find(
+        event?.assistants?.find(
           (assistant) => assistant.login === login
         )
       )
@@ -161,16 +162,17 @@ const getXp = async () => {
           activite.title,
           typeAct[0],
           "organisateur",
-          activite.events[0].begin
+          event.begin
         );
-      else if (activite?.events[0]?.already_register)
+      else if (event?.already_register)
         addActivite(
           activite.title,
           typeAct[0],
           "soon",
-          activite.events[0].begin
+          event.begin
         );
     }
+    });
   });
   checkAbsence();
   countXpSoon();
