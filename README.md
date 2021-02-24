@@ -14,6 +14,8 @@ You can see all the activities where you have been present or absent as well as 
 - NodeJS 14.8.0 or later
 - Git
 
+Use [NVM](https://github.com/nvm-sh/nvm) (node version manager) to get the correct version of node
+
 ## Common setup:
 Clone the repo and install the dependencies.
 
