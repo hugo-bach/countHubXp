@@ -6,6 +6,7 @@ This script lists these different activities:
 - Hackathon
 - Workshop / CodingBattle
 - Talk / Hubtalk
+- Experience
 
 You can see all the activities where you have been present or absent as well as the activities where you are registered but which have not yet started.
 
