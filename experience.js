@@ -69,11 +69,11 @@ const getProfil = async () => {
 };
 
 const getActivitiesHub = async (region) => {
-    return await requestGet(`${autoLogin}/module/2020/B-INN-000/${region}-0-1/?format=json`);
+    return await requestGet(`${autoLogin}/module/2021/B-INN-000/${region}-0-1/?format=json`);
 };
 
 const getAllExperiences = async (activities, region, login) => {
-    const url = `${autoLogin}/module/2020/B-INN-000/${region?.split('/')[1]}-0-1`;
+    const url = `${autoLogin}/module/2021/B-INN-000/${region?.split('/')[1]}-0-1`;
     try {
         const res = await Promise.all(
             activities.map((act) => {
